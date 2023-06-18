@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import BlogsIndex from '../components/blogs/BlogsIndex.vue'
-import BlogsContact from '../components/blogs/BlogsContact'
-
+import BlogsDeterminantes from '../components/blogs/BlogsDeterminantes.vue'
+import BlogsReglaCramer from '../components/blogs/BlogsReglaCramer.vue'
+import BlogsInversaMatriz from '../components/blogs/BlogsInversaMatriz.vue'
 /*
 * Nota: el endpoint /home se define asi para el componente BlogsIndex
   es asi por que luego de iniciar sesión con laravel nos manda a ese endpoint
@@ -19,9 +20,20 @@ const routes = [
     },
     {
         path: '/laravel-vue/public/home',
-        name: 'blogs.contact',
-        component: BlogsContact
+        name: 'blogs.Determinantes',
+        component: BlogsDeterminantes
+    },
+    {
+        path: '/laravel-vue/public/home',
+        name: 'blogs.ReglaCramer',
+        component: BlogsReglaCramer
+    },
+    {
+        path: '/laravel-vue/public/home',
+        name: 'blogs.InversaMatriz',
+        component: BlogsInversaMatriz
     }
+
 ]
 
 export default createRouter({

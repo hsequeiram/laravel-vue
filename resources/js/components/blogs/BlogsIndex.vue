@@ -101,7 +101,7 @@
                                             >
                                                 4x4
                                             </button>
-                                            <button
+                                            <!-- <button
                                                 class="nav-link"
                                                 id="v-pills-settings-tab"
                                                 data-bs-toggle="pill"
@@ -112,7 +112,7 @@
                                                 aria-selected="false"
                                             >
                                                 Settings
-                                            </button>
+                                            </button> -->
                                         </div>
                                         <div
                                             class="tab-content"
@@ -153,14 +153,14 @@
                                             >
                                                 ...
                                             </div>
-                                            <div
+                                            <!-- <div
                                                 class="tab-pane fade"
                                                 id="v-pills-settings"
                                                 role="tabpanel"
                                                 aria-labelledby="v-pills-settings-tab"
                                             >
                                                 ...
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

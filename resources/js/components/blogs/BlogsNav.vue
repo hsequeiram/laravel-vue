@@ -15,14 +15,16 @@
               <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <router-link :to="{ name: 'blogs.contact' }" class="nav-link mx-2">Determinantes</router-link>
+                <router-link :to="{ name: 'blogs.Determinantes' }" class="nav-link mx-2">Determinantes</router-link>
               <!-- <a class="nav-link mx-2" href="#">Determinantes</a> -->
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Regla de cramer</a>
+              <router-link :to="{ name: 'blogs.ReglaCramer' }" class="nav-link mx-2">Regla de cramer</router-link>
+              <!-- <a class="nav-link mx-2" href="#">Regla de cramer</a> -->
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2" href="#">Inversa de una Matriz</a>
+              <router-link :to="{ name: 'blogs.InversaMatriz' }" class="nav-link mx-2">Inversa de una Matriz</router-link>
+                <!-- <a class="nav-link mx-2" href="#">Inversa de una Matriz</a> -->
               </li>
             </ul>
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
