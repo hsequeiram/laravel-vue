@@ -372,7 +372,43 @@
                                                         <div>
                                                             <button type="button" name="calcular" @click="Calcular(7)">CALCULAR</button>
                                                         </div>
+                                            </div>
+                                            <div v-if="Tipomatriz == '3'">
+                                                <div class="justify-content-center">
+                                                            <input v-model="matriz3x3[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[0][2]" type="number" placeholder="(1,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
                                                         </div>
+                                                        <div>
+                                                            <input v-model="matriz3x3[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[1][2]" type="number" placeholder="(2,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <div>
+                                                            <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <br/>
+                                                        <div>
+                                                            <p v-for="(item, index) in Pasos9" :key="index">
+                                                                Paso {{ index+1 }}:<br/>
+                                                               
+                                                                <p v-if="Array.isArray(item)" v-for="(element, inde) in item" :key="inde">
+                                                                {{ element }}<br/>
+                                                                
+                                                            </p>
+                                                            <P v-else>
+                                                                   {{ item }}<br/> 
+                                                                </P>
+                                                           </p>
+                                                           
+                                                           
+                                                       </div>
+                                                        <div>
+                                                            <button type="button" name="calcular" @click="Calcular(8)">CALCULAR</button>
+                                                        </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <h1>Inversa</h1>
@@ -404,6 +440,7 @@ export default {
             Pasos5:[],
             Pasos6:[],
             Pasos8:[],
+            Pasos9:[],
             Resultado: "",
             matriz2x2: [
                         [null, null],
