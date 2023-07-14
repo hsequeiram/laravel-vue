@@ -206,11 +206,175 @@
                             <div class="tab-pane fade" id="nav-Regla-de-cramer" role="tabpanel"
                                 aria-labelledby="nav-Regla-de-cramer">
                                 <div class="card-body">
+                                    <div class="container" style="border: solid;">
+                                                    <div class="container-md">
+                                                        <select
+                                                            v-model="Incognita"
+                                                        >
+                                                            <option value="0">--Seleccione el numero de incognitas--</option>
+                                                            <option value="2">2 incognitas</option>
+                                                            <option value="3">3 incognitas</option>
+
+                                                        </select>
+                                                        <div v-if="Incognita == '2'">
+                                                        <div class="justify-content-center">
+                                                            <input v-model="sistecu2[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <div>
+                                                            <input v-model="sistecu2[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <!-- <div>
+                                                            <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div> -->
+                                                        <br/>
+                                                        <!-- <div>
+                                                           
+                                                            <textarea name="" id="" cols="30" rows="10">{{ this.Resultado }}</textarea>
+                                                        </div> -->
+                                                        <div>
+                                                            <p v-for="(item, index) in Pasos5" :key="index">
+                                                                Paso {{ index+1 }}:<br/>
+                                                               
+                                                                <p v-if="Array.isArray(item)" v-for="(element, inde) in item" :key="inde">
+                                                                {{ element }}<br/>
+                                                                
+                                                            </p>
+                                                            <P v-else>
+                                                                   {{ item }}<br/> 
+                                                                </P>
+                                                           </p>
+                                                           
+                                                           
+                                                       </div>
+                                                        <div>
+                                                            <button type="button" name="calcular" @click="Calcular(4)">CALCULAR</button>
+                                                        </div>
+                                                        </div>
+                                                        <div v-if="Incognita == '3'">
+                                                            <div class="justify-content-center">
+                                                            <input v-model="sistecu3[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[0][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <div>
+                                                            <input v-model="sistecu3[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[1][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <div>
+                                                            <input v-model="sistecu3[2][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[2][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[2][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[2][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <!-- <div>
+                                                            <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz3x3[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div> -->
+                                                        <br/>
+                                                        <!-- <div>
+                                                           
+                                                            <textarea name="" id="" cols="30" rows="10">{{ this.Resultado }}</textarea>
+                                                        </div> -->
+                                                        <div>
+                                                            <p v-for="(item, index) in Pasos6" :key="index">
+                                                                Paso {{ index+1 }}:<br/>
+                                                               
+                                                                <p v-if="Array.isArray(item)" v-for="(element, inde) in item" :key="inde">
+                                                                {{ element }}<br/>
+                                                                
+                                                            </p>
+                                                            <P v-else>
+                                                                   {{ item }}<br/> 
+                                                                </P>
+                                                           </p>
+                                                           
+                                                           
+                                                       </div>
+                                                        <div>
+                                                            <button type="button" name="calcular" @click="Calcular(5)">CALCULAR</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                     <h1>Regla</h1>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-Inversa" role="tabpanel" aria-labelledby="nav-Inversa-tab">
                                 <div class="card-body">
+                                    <div class="container" style="border: solid;">
+                                        <div class="container-md">
+                                            <select
+                                                v-model="Tipomatriz"
+                                            >
+                                                <option value="0">--Seleccione el tipo de matriz--</option>
+                                                <option value="2">2x2</option>
+                                                <option value="3">3x3</option>
+
+                                            </select>
+                                            <div v-if="Tipomatriz == '2'">
+                                                <div class="justify-content-center">
+                                                            <input v-model="matriz2x2[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz2x2[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                        <div>
+                                                            <input v-model="matriz2x2[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="matriz2x2[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        </div>
+                                                           
+                                                        <br/>
+                                                        <!-- <div>
+                                                           
+                                                            <textarea name="" id="" cols="30" rows="10">{{ this.Resultado }}</textarea>
+                                                        </div> -->
+                                                        <div>
+                                                            <p v-for="(item, index) in Pasos8" :key="index">
+                                                                Paso {{ index+1 }}:<br/>
+                                                               
+                                                                <p v-if="Array.isArray(item)" v-for="(element, inde) in item" :key="inde">
+                                                                {{ element }}<br/>
+                                                                
+                                                            </p>
+                                                            <P v-else>
+                                                                   {{ item }}<br/> 
+                                                                </P>
+                                                           </p>
+                                                           
+                                                           
+                                                       </div>
+                                                        <div>
+                                                            <button type="button" name="calcular" @click="Calcular(7)">CALCULAR</button>
+                                                        </div>
+                                                        </div>
+                                        </div>
+                                    </div>
                                     <h1>Inversa</h1>
                                 </div>
                             </div>
@@ -232,9 +396,14 @@ export default {
     },
     data() {
         return{
+            Incognita:'0',
+            Tipomatriz:'0',
             Pasos2:[],
             Pasos3:[],
             Pasos4:[],
+            Pasos5:[],
+            Pasos6:[],
+            Pasos8:[],
             Resultado: "",
             matriz2x2: [
                         [null, null],
@@ -247,6 +416,15 @@ export default {
                         ],
             matriz4x4: [
                         [null, null,null,null],
+                        [null, null,null,null],
+                        [null, null,null,null],
+                        [null, null,null,null]
+                        ],
+            sistecu2: [
+                        [null, null,null],
+                        [null, null,null]
+                        ],
+            sistecu3: [
                         [null, null,null,null],
                         [null, null,null,null],
                         [null, null,null,null]
@@ -267,6 +445,18 @@ export default {
                 break
                 case 3:
                 this.Pasos4 = math.Pasos4x4(this.matriz4x4)
+                //this.Resultado = math.Det4x4(this.matriz4x4)
+                break
+                case 4:
+                this.Pasos5 = math.PasosSistEcu2(this.sistecu2)
+                //this.Resultado = math.Det4x4(this.matriz4x4)
+                break
+                case 5:
+                this.Pasos6 = math.PasosSistEcu3(this.sistecu3)
+                //this.Resultado = math.Det4x4(this.matriz4x4)
+                break
+                case 7:
+                this.Pasos8 = math.PasosInv2x2(this.matriz2x2)
                 //this.Resultado = math.Det4x4(this.matriz4x4)
                 break
             }
