@@ -30,7 +30,7 @@
                                 aria-labelledby="nav-Determinante-tab">
                                 <div class="card-body">
                                     <div class="d-flex align-items-start">
-                                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                                        <div class="nav flex-column nav-pills me-3 card" id="v-pills-tab" role="tablist"
                                             aria-orientation="vertical">
                                             <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                                                 data-bs-target="#v-pills-home" type="button" role="tab"
@@ -63,16 +63,19 @@
                                         <div class="tab-content" id="v-pills-tabContent">
                                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                                 aria-labelledby="v-pills-home-tab">
-                                                <div class="container" style="border: solid;">
+                                                <div class="container">
                                                     <div class="container-md">
-                                                        
-                                                        <div class="justify-content-center">
-                                                            <input v-model="matriz2x2[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz2x2[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz2x2[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz2x2[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        <div class="m-0 row justify-content-center">
+                                                            <div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz2x2[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz2x2[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz2x2[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz2x2[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <br/>
                                                         <!-- <div>
@@ -87,34 +90,36 @@
                                                            
                                                            
                                                        </div>
-                                                        <div>
-                                                            <button type="button" name="calcular" @click="Calcular(1)">CALCULAR</button>
-                                                        </div>
-                                                        <div>
-                                                            <button type="button" name="cls" @click="Borrar(1)">BORRAR</button>
-                                                        </div>
+                                                       <div class="container-fluid">
+                                                        <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(1)" style="margin-right: 1ch;">Calcular</button>
+                                                        <button class="float-left btn btn-danger" type="button" name="cls" @click="Borrar(1)">Borrar</button>
+                                                       </div>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                                 aria-labelledby="v-pills-profile-tab">
-                                                <div class="container" style="border: solid;">
+                                                <div class="container">
                                                     <div class="container-md">
-                                                        
-                                                        <div class="justify-content-center">
-                                                            <input v-model="matriz3x3[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[0][2]" type="number" placeholder="(1,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz3x3[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[1][2]" type="number" placeholder="(2,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz3x3[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        <div class="m-0 row justify-content-center">
+                                                            <div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz3x3[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[0][2]" type="number" placeholder="(1,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz3x3[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[1][2]" type="number" placeholder="(2,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz3x3[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <br/>
                                                         <!-- <div>
@@ -129,41 +134,44 @@
                                                            
                                                            
                                                        </div>
-                                                        <div>
-                                                            <button type="button" name="calcular" @click="Calcular(2)">CALCULAR</button>
-                                                        </div>
+                                                       <div class="container-fluid">
+                                                        <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(2)" style="margin-right: 1ch;">Calcular</button>
+                                                        <button class="float-left btn btn-danger" type="button" name="cls" @click="Borrar(2)">Borrar</button>
+                                                       </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                                 aria-labelledby="v-pills-messages-tab">
-                                                ...
-                                                <div class="container" style="border: solid;">
+                                                <div class="container">
                                                     <div class="container-md">
-                                                        
-                                                        <div class="justify-content-center">
-                                                            <input v-model="matriz4x4[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[0][2]" type="number" placeholder="(1,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[0][3]" type="number" placeholder="(1,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz4x4[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[1][2]" type="number" placeholder="(2,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[1][3]" type="number" placeholder="(2,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz4x4[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[2][3]" type="number" placeholder="(3,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                        </div>
-                                                        <div>
-                                                            <input v-model="matriz4x4[3][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[3][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[3][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz4x4[3][3]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                        <div class="m-0 row justify-content-center">
+                                                            <div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz4x4[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[0][2]" type="number" placeholder="(1,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[0][3]" type="number" placeholder="(1,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz4x4[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[1][2]" type="number" placeholder="(2,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[1][3]" type="number" placeholder="(2,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz4x4[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[2][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[2][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[2][3]" type="number" placeholder="(3,4)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                                <div>
+                                                                    <input class="text-center" v-model="matriz4x4[3][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[3][1]" type="number" placeholder="(3,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[3][2]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                    <input class="text-center" v-model="matriz4x4[3][3]" type="number" placeholder="(3,3)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <br/>
                                                         <!-- <div>
@@ -185,9 +193,10 @@
                                                            
                                                            
                                                        </div>
-                                                        <div>
-                                                            <button type="button" name="calcular" @click="Calcular(3)">CALCULAR</button>
-                                                        </div>
+                                                       <div class="container-fluid">
+                                                        <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(3)" style="margin-right: 1ch;">Calcular</button>
+                                                        <button class="float-left btn btn-danger" type="button" name="cls" @click="Borrar(3)">Borrar</button>
+                                                       </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -206,10 +215,11 @@
                             <div class="tab-pane fade" id="nav-Regla-de-cramer" role="tabpanel"
                                 aria-labelledby="nav-Regla-de-cramer">
                                 <div class="card-body">
-                                    <div class="container" style="border: solid;">
+                                    <div class="container">
                                                     <div class="container-md">
                                                         <select
-                                                            v-model="Incognita"
+                                                            v-model="Incognita" 
+                                                            class="form-select mb-2"
                                                         >
                                                             <option value="0">--Seleccione el numero de incognitas--</option>
                                                             <option value="2">2 incognitas</option>
@@ -218,20 +228,18 @@
                                                         </select>
                                                         <div v-if="Incognita == '2'">
                                                         <div class="justify-content-center">
-                                                            <input v-model="sistecu2[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu2[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu2[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-right: 0.3ch;"/>
+                                                            <label>x</label>
+                                                            <input v-model="sistecu2[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>y =</label>
+                                                            <input v-model="sistecu2[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
                                                         </div>
                                                         <div>
-                                                            <input v-model="sistecu2[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu2[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu2[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu2[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-right: 0.3ch;"/>
+                                                            <label>x</label>
+                                                            <input v-model="sistecu2[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>y =</label>
+                                                            <input v-model="sistecu2[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
                                                         </div>
                                                         <!-- <div>
                                                             <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
@@ -259,39 +267,36 @@
                                                            
                                                        </div>
                                                         <div>
-                                                            <button type="button" name="calcular" @click="Calcular(4)">CALCULAR</button>
+                                                            <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(4)">Calcular</button>
                                                         </div>
                                                         </div>
                                                         <div v-if="Incognita == '3'">
                                                             <div class="justify-content-center">
-                                                            <input v-model="sistecu3[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[0][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[0][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-right: 0.3ch;"/>
+                                                            <label>x</label>
+                                                            <input v-model="sistecu3[0][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>y</label>
+                                                            <input v-model="sistecu3[0][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>z =</label>
+                                                            <input v-model="sistecu3[0][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
                                                         </div>
                                                         <div>
-                                                            <input v-model="sistecu3[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[1][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[1][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-right: 0.3ch;"/>
+                                                            <label>x</label>
+                                                            <input v-model="sistecu3[1][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>y</label>
+                                                            <input v-model="sistecu3[1][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>z =</label>
+                                                            <input v-model="sistecu3[1][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
                                                         </div>
                                                         <div>
-                                                            <input v-model="sistecu3[2][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="x" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[2][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="y" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[2][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="z" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input readonly type="text" value="=" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="sistecu3[2][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input v-model="sistecu3[2][0]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-right: 0.3ch;"/>
+                                                            <label>x</label>
+                                                            <input v-model="sistecu3[2][1]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>y</label>
+                                                            <input v-model="sistecu3[2][2]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
+                                                            <label>z =</label>
+                                                            <input v-model="sistecu3[2][3]" type="number" style="max-width: 6.33333ch; min-width: 6.33333ch; margin-left: 0.97ch; margin-right: 0.3ch;"/>
                                                         </div>
                                                         <!-- <div>
                                                             <input v-model="matriz3x3[2][0]" type="number" placeholder="(3,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
@@ -318,21 +323,22 @@
                                                            
                                                            
                                                        </div>
-                                                        <div>
-                                                            <button type="button" name="calcular" @click="Calcular(5)">CALCULAR</button>
+                                                       <div>
+                                                            <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(5)">Calcular</button>
                                                         </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                    <h1>Regla</h1>
+                                    <!--<h1>Regla</h1>-->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="nav-Inversa" role="tabpanel" aria-labelledby="nav-Inversa-tab">
                                 <div class="card-body">
-                                    <div class="container" style="border: solid;">
+                                    <div class="container">
                                         <div class="container-md">
                                             <select
-                                                v-model="Tipomatriz"
+                                                v-model="Tipomatriz" 
+                                                class="form-select mb-2"
                                             >
                                                 <option value="0">--Seleccione el tipo de matriz--</option>
                                                 <option value="2">2x2</option>
@@ -341,12 +347,12 @@
                                             </select>
                                             <div v-if="Tipomatriz == '2'">
                                                 <div class="justify-content-center">
-                                                            <input v-model="matriz2x2[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz2x2[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input class="text-center" v-model="matriz2x2[0][0]" type="number" placeholder="(1,1)" ove style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input class="text-center" v-model="matriz2x2[0][1]" type="number" placeholder="(1,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
                                                         </div>
                                                         <div>
-                                                            <input v-model="matriz2x2[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
-                                                            <input v-model="matriz2x2[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input class="text-center" v-model="matriz2x2[1][0]" type="number" placeholder="(2,1)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
+                                                            <input class="text-center" v-model="matriz2x2[1][1]" type="number" placeholder="(2,2)"  style="max-width: 6.33333ch; min-width: 6.33333ch;"/>
                                                         </div>
                                                            
                                                         <br/>
@@ -370,7 +376,7 @@
                                                            
                                                        </div>
                                                         <div>
-                                                            <button type="button" name="calcular" @click="Calcular(7)">CALCULAR</button>
+                                                            <button class="float-left btn btn-success" type="button" name="calcular" @click="Calcular(7)">Calcular</button>
                                                         </div>
                                             </div>
                                             <div v-if="Tipomatriz == '3'">
@@ -411,7 +417,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1>Inversa</h1>
+                                    <!--<h1>Inversa</h1>-->
                                 </div>
                             </div>
                         </div>
@@ -509,6 +515,6 @@ export default {
     },
 };
 </script>
-<style scoped >
+<style rel="stylesheet" type="text/css">
 
 </style>

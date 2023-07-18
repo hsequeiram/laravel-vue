@@ -1,6 +1,6 @@
 <template>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
       <div class="container-fluid">
         <router-link :to="{ name: 'blogs.index' }" class="navbar-brand">Algebra</router-link>
         <!-- <a class="navbar-brand" href="public/home">Algebra
@@ -15,7 +15,7 @@
               <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <router-link :to="{ name: 'blogs.Determinantes' }" class="nav-link mx-2">Determinantes</router-link>
+              <router-link :to="{ name: 'blogs.Determinantes' }" class="nav-link mx-2">Determinantes</router-link>
               <!-- <a class="nav-link mx-2" href="#">Determinantes</a> -->
             </li>
             <li class="nav-item">
@@ -24,7 +24,7 @@
             </li>
             <li class="nav-item">
               <router-link :to="{ name: 'blogs.InversaMatriz' }" class="nav-link mx-2">Inversa de una Matriz</router-link>
-                <!-- <a class="nav-link mx-2" href="#">Inversa de una Matriz</a> -->
+              <!-- <a class="nav-link mx-2" href="#">Inversa de una Matriz</a> -->
               </li>
             </ul>
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
