@@ -12,7 +12,8 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown" style="flex-grow: 0;">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+              <router-link :to="{ name: 'blogs.index' }" class="nav-link mx-2 active">Home</router-link>
+              <!-- <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a> -->
             </li>
             <li class="nav-item">
               <router-link :to="{ name: 'blogs.Determinantes' }" class="nav-link mx-2">Determinantes</router-link>
@@ -25,6 +26,14 @@
             <li class="nav-item">
               <router-link :to="{ name: 'blogs.InversaMatriz' }" class="nav-link mx-2">Inversa de una Matriz</router-link>
               <!-- <a class="nav-link mx-2" href="#">Inversa de una Matriz</a> -->
+              </li>
+              <li class="nav-item">
+              <router-link :to="{ name: 'blogs.Acercade' }" class="nav-link mx-2">Acerca de</router-link>
+              <!-- <a class="nav-link mx-2" href="#">Acerca de</a> -->
+              </li>
+              <li class="nav-item">
+              <!-- <router-link :to="{ name: 'blogs.Acercade' }" class="nav-link mx-2">Acerca de</router-link> -->
+              <a class="nav-link mx-2" href="https://drive.google.com/file/d/1uBXsI8MU6qYUFsb2kzQkBkenVRNEkIbV/view?usp=sharing" target="_blank">Guia</a>
               </li>
             </ul>
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">

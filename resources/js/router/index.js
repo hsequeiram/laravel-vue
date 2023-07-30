@@ -4,6 +4,8 @@ import BlogsIndex from '../components/blogs/BlogsIndex.vue'
 import BlogsDeterminantes from '../components/blogs/BlogsDeterminantes.vue'
 import BlogsReglaCramer from '../components/blogs/BlogsReglaCramer.vue'
 import BlogsInversaMatriz from '../components/blogs/BlogsInversaMatriz.vue'
+import BlogsAcercade from '../components/blogs/BlogsAcercade.vue'
+
 /*
 * Nota: el endpoint /home se define asi para el componente BlogsIndex
   es asi por que luego de iniciar sesión con laravel nos manda a ese endpoint
@@ -19,20 +21,26 @@ const routes = [
         component: BlogsIndex
     },
     {
-        path: '/laravel-vue/public/home',
+        path: '/laravel-vue/public/Determinantes',
         name: 'blogs.Determinantes',
         component: BlogsDeterminantes
     },
     {
-        path: '/laravel-vue/public/home',
+        path: '/laravel-vue/public/ReglaCramer',
         name: 'blogs.ReglaCramer',
         component: BlogsReglaCramer
     },
     {
-        path: '/laravel-vue/public/home',
+        path: '/laravel-vue/public/InversaMatriz',
         name: 'blogs.InversaMatriz',
         component: BlogsInversaMatriz
+    },
+    {
+        path: '/laravel-vue/public/Acercade',
+        name: 'blogs.Acercade',
+        component: BlogsAcercade
     }
+
 
 ]
 
