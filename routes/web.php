@@ -21,6 +21,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::view('/{any}', 'home')
-//     ->middleware('auth')
-//     ->where('any', '.*');
+Route::view('/{any}', 'home')
+     
+    ->where('any', '.*');
+// Route::group([
+//     'prefix' => '{subject?}',
+//     'as' => 'subject.',
+//     'namespace' => 'subject',
+    
+//     'where' => ['subject' => 'home|BlogsAcercade|blogs.Acercade']
+// ], function () {
+//     Route::view('/{any?}', 'app')->name('subject')->where('any', '.*');
+// });
