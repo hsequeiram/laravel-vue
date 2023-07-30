@@ -33,7 +33,7 @@
               </li>
               <li class="nav-item">
               <!-- <router-link :to="{ name: 'blogs.Acercade' }" class="nav-link mx-2">Acerca de</router-link> -->
-              <a class="nav-link mx-2" href="https://drive.google.com/file/d/1uBXsI8MU6qYUFsb2kzQkBkenVRNEkIbV/view?usp=sharing" target="_blank">Guia</a>
+              <a class="nav-link mx-2" href="https://drive.google.com/file/d/1-dnrtGXvhKd2a4wqIHngtgiS5nz3EKV4/view?usp=sharing" target="_blank">Guia</a>
               </li>
             </ul>
           <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
