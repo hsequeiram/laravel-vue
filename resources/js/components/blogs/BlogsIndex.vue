@@ -485,8 +485,13 @@
                                                                 Paso {{ index+1 }}:<br/>
                                                                
                                                                 <p v-if="Array.isArray(item) && index != 3 && index != 5 && index != 7" v-for="(element, inde) in item" :key="inde">
-                                                                {{ element }}<br/>
                                                                 
+                                                                <P v-if="Array.isArray(element) && index != 3 && index != 5 && index != 7" v-for="(elemen, ind) in element" :key="ind">
+                                                                    {{ elemen }}<br/>
+                                                                </P>
+                                                                <P v-else>
+                                                                   {{ element }}<br/> 
+                                                                </P>
                                                             </p>
                                                             <P v-else-if="index==3 || index==5 || index==7">
                                                                    
